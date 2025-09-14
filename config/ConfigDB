@@ -1,0 +1,11 @@
+const config = {
+    user: 'sa',
+    password: 'Putoki2024.',
+    server: '172.26.219.236',
+    database: 'AdventureWorks2022',
+    options: {
+        encrypt: false,
+        trustServerCertificate: true
+    }
+};
+export default config;
