@@ -130,6 +130,23 @@ app.get("/Trabajadores", async (req, res) => {
 });
 
 
+app.get("/TrabajadoresFiltro", async (req, res) => {
+    console.log(">>> Entró al endpoint /TrabajadoresFiltro", req.query);
+    try {
+        const { genero, estadoMarital } = req.query;
+
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input("genero", sql.VarChar, genero)
+            .input("estadoMarital", sql.VarChar, estadoMarital)
+            .execute("TrabajadoresFiltroSexo");
+
+        res.json(result.recordset);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Hay un error en la base de datos");
+    }
+});
 
 //Aquí hago un endopoint en el cual mando el requisito de la llamada y la respuesta
 app.get("/", (req, res) => {
@@ -139,6 +156,7 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
+
 
 
 
