@@ -1,0 +1,33 @@
+Para el clienteR
+{
+    "TipoPersona": "EM",
+    "Nombre": "arnoldo",
+    "SegundoNombre": "as",
+    "Apellido": "limon"
+}
+
+
+
+para tienda insert
+{
+   "NombreTienda": "Pureba",
+   "IdVendedor": 278
+}
+
+
+
+para el delete del celular y correo
+
+{
+  "tipoTrabajo": "EM",
+  "nombre": "Roberto",
+  "segundoNombreP": null,
+  "apellidoP": "Tamburello"
+}
+
+
+Para la actualización de tienda
+{
+ "NombreTienda": "Riders Company"
+ "NuevoNombre": "Tilines Company"
+}
