@@ -37,7 +37,7 @@ app.post("/ClientesR", async (req, res) => {
             .input("Nombre", sql.VarChar, Nombre)
             .input("SegundoNombre", sql.VarChar, segundoNombreN)
             .input("Apellido", sql.VarChar, Apellido)
-            .execute("insertClientes"); // tu SP en SQL Server
+            .execute("insertClientes"); 
 
         res.json({ message: "Cliente insertado correctamente", result: result.recordset });
     } catch (err) {
@@ -139,6 +139,7 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
+
 
 
 
