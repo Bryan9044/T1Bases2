@@ -31,3 +31,10 @@ Para la actualización de tienda
  "NombreTienda": "Riders Company"
  "NuevoNombre": "Tilines Company"
 }
+
+
+Para el select con filtro de trabajadores
+
+ "genero": "M",
+ "estadoMarital": "S"
+
